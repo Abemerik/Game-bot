@@ -39,7 +39,7 @@ def start_game(bot, user, chat_id):
         btn_4 = telebot.types.InlineKeyboardButton(text="Промокод", callback_data="promo")
         btn_6 = telebot.types.InlineKeyboardButton(text="Репорты", callback_data="rep_adm")
         btn_7 = telebot.types.InlineKeyboardButton(text="Группа", url="https://t.me/+_Dcale1HD4RmYjM6")
-        btn_5 = telebot.types.InlineKeyboardButton(text="Пригласить друга", callback_data="friends_adm")
+        btn_5 = telebot.types.InlineKeyboardButton(text="Пригласить друга", callback_data="friends")
         markup.add(btn_1, btn_2, btn_3, btn_4, btn_5, btn_6, btn_7)
         bot.send_message(chat_id, f'''✨ Профиль Администратора
 ────────────────────────────

@@ -74,17 +74,7 @@ def callback_handler(call):
     chat_id = call.message.chat.id
     message = call.message
 
-    if call.data == "cube_adm":
-        confirmation_play_cube(bot, user, chat_id)
-    elif call.data == "slot_adm":
-        game_slot(bot, user, chat_id)
-    elif call.data == "help_adm":
-        help_soo(message, bot)
-    elif call.data == "promo_adm":
-        promo2(user, chat_id)
-    elif call.data == "friends_adm":
-        send_ref_link(user, chat_id)
-    elif call.data == "ban":
+    if call.data == "ban":
         pass
     elif call.data == "adm+":
         new_admin_command(user, chat_id)
@@ -100,10 +90,11 @@ def callback_handler(call):
         confirmation_play_cube(bot, user, chat_id)
     elif call.data == "slot":
         game_slot(bot, user, chat_id)
+        print("game slot open")
     elif call.data == "help":
         help_soo(message, bot)
     elif call.data == "promo":
-        promo2(user, chat_id)
+        promo_command(message, bot)
     elif call.data == "friends":
         send_ref_link(user, chat_id)
     elif call.data == "back":
@@ -112,15 +103,13 @@ def callback_handler(call):
         report(call.message)
     elif call.data == "play_cube":
         send_kubik(bot, user, chat_id)
-    elif call.data == 'spin':    
-        slot_proces_game(user, chat_id)
-#        start_game(user, chat_id)
     elif call.data == 'spin':
-        slot_proces_game(user, chat_id)
+        slot_proces_game(bot, user, chat_id)
+        print("slot_proces_game open")
     elif call.data == "report1":
         otvet_id(user, chat_id, bot)
-    elif call.data == "promo21":
-        promo1(message, bot)
+    elif call.data == "play_cube_still":
+        send_kubik(bot, user, chat_id)
 
 @bot.message_handler(commands=['shop'])
 def shop_home(message):

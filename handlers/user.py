@@ -79,14 +79,14 @@ def buy_money(bot, user, chat_id):
     if donat >= 25:
         c.execute(f'''
 UPDATE users
-SET donat = donat - 25
-WHERE user_id = {user_id}
-''')
+SET donat = donat - ?
+WHERE user_id = ?
+''', (25, user_id))
         c.execute(f'''
 UPDATE users
-SET points = points + 1000
-WHERE user_id = {user_id}
-''')
+SET points = points + ?
+WHERE user_id = ?
+''', (1000, user_id))
     db.commit()
     db.close()
     bot.send_message(chat_id, '🎉 Всё готово! Теперь у тебя есть возможность приумножить свои средства и открыть новые горизонты. Вперёд к успеху и достижению новых целей! 🚀')

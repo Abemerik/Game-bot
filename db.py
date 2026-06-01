@@ -88,7 +88,7 @@ def admins_plata():
     user_ids = c.fetchall()
     # Обновляем points для каждого user_id
     for (user_id,) in user_ids:
-        c.execute("UPDATE users SET points = points + 100 WHERE user_id = ?", (user_id,))
+        c.execute("UPDATE users SET points = points + ? WHERE user_id = ?", (100, user_id))
     db.commit()
     db.close()
 
@@ -146,7 +146,6 @@ WHERE user_id = ?
 ''', (1, user_id))
     db.commit()
     db.close()
-    print("pluse defeat")
 
 
 

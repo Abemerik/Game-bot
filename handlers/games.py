@@ -86,6 +86,7 @@ slots = ['🍒', '🍋', '🔔', '⭐', '💎']
 
 
 def game_slot(bot, user, chat_id):
+    print("game slot")
     markup = telebot.types.InlineKeyboardMarkup()
     btn_1 = telebot.types.InlineKeyboardButton(text="🔙 Меню", callback_data="back")
     btn_2 = telebot.types.InlineKeyboardButton(text='🎰 Крутить', callback_data='spin')
@@ -103,6 +104,7 @@ def game_slot(bot, user, chat_id):
 
 
 def slot_proces_game(bot, user, chat_id):
+    print("slot_proces_game")
     user_id = user.id
     db = sqlite3.connect('BaseBot.db')
     c = db.cursor()
@@ -139,13 +141,13 @@ def slot_proces_game(bot, user, chat_id):
         else:
             message_text = f"Результат: {result_text}\nПопробуйте еще раз!"
             pluse_defeat(user, chat_id)
-        confirmation_play_slot_still(bot, user, chat_id)
-        # Отправляем результат и кнопку для повторного спина
-        #markup = telebot.types.InlineKeyboardMarkup()
-        #btn_1 = telebot.types.InlineKeyboardButton(text='🎰 Крутить снова', callback_data='spin')
-        #btn_2 = telebot.types.InlineKeyboardButton(text='🔙 Меню', callback_data='back')
-        #markup.add(btn_2, btn_1)
-        #bot.send_message(chat_id, message_text, reply_markup=markup)
+        #confirmation_play_slot_still(bot, user, chat_id)
+        #Отправляем результат и кнопку для повторного спина
+        markup = telebot.types.InlineKeyboardMarkup()
+        btn_1 = telebot.types.InlineKeyboardButton(text='🎰 Крутить снова', callback_data='spin')
+        btn_2 = telebot.types.InlineKeyboardButton(text='🔙 Меню', callback_data='back')
+        markup.add(btn_2, btn_1)
+        bot.send_message(chat_id, message_text, reply_markup=markup)
     else:
         bot.send_message(chat_id, '''🌟 Упс! 🌟
     У вас недостаточно монет, чтобы продолжить. 💰✨
