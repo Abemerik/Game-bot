@@ -95,6 +95,14 @@ Telegram‑бот с мини‑играми (кубик, слоты), мага�
     └── .gitignore # Игнорируемые файлы
 
 
-## 👤 Автор
+## 📬 Контакты
 
-Егор Лапшин — [GitHub](https://github.com/Abemerik)
+**По вопросам поддержки, доработок или заказа аналогичного бота — пишите:**
+
+| **Автор** | Abemerik |
+|-----------|----------|
+| **GitHub** | [Профиль](https://github.com/Abemerik) |
+| **Telegram** | [@Abemerik](https://t.me/Abemerik) |
+| **Kwork** | [Профиль](https://kwork.ru/user/abemerik1) |
+
+Всегда на связи. Отвечаю быстро.
