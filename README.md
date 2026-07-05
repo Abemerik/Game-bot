@@ -103,6 +103,6 @@ Telegram‑бот с мини‑играми (кубик, слоты), мага�
 |-----------|----------|
 | **GitHub** | [Профиль](https://github.com/Abemerik) |
 | **Telegram** | [@Abemerik](https://t.me/Abemerik) |
-| **Kwork** | [Профиль](https://kwork.ru/user/abemerik1) |
+| **Kwork** | [Профиль](https://kwork.ru/user/abemerik) |
 
 Всегда на связи. Отвечаю быстро.
